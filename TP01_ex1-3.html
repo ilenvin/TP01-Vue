@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id="hello">
+            {{ hello }}
+        </br>
+            <button v-on:click="sayHello">
+                Say hello
+            </button>
+        </div>
+        <script>
+            const Hello = {
+                data() {
+                    return {
+                        hello: 'Hello World'
+                    }
+
+                },
+                
+                mounted(){
+                    alert("I'm ready!");
+                },
+                methods: {
+                sayHello() {
+                    alert("Hello, ei");
+                }
+            }
+            }
+            Vue.createApp(Hello).mount('#hello')
+        </script>
+      
+    </body>
+</html>
